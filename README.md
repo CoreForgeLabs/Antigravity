@@ -63,13 +63,24 @@ Antigravity Patcher снимает региональные ограничени
 
 ### macOS / Linux
 
+1. Откройте **Terminal** (Finder → Программы → Утилиты → Terminal)
+2. Перейдите в папку с файлом:
 ```bash
-# Сделать исполняемым (один раз)
-chmod +x ./antigravity_patcher-*
-
-# Запустить
+cd ~/Downloads
+```
+3. Выполните **один раз** (разрешить запуск + снять блокировку):
+```bash
+chmod +x ./antigravity_patcher-macos-arm64
+xattr -rd com.apple.quarantine ./antigravity_patcher-macos-arm64
+```
+4. Запустите:
+```bash
 ./antigravity_patcher-macos-arm64
 ```
+
+> **Apple Silicon** (M1/M2/M3/M4): `antigravity_patcher-macos-arm64`
+> **Intel Mac**: `antigravity_patcher-macos-intel`
+> **Linux**: `antigravity_patcher-linux-x64`
 
 Откроется интерактивное меню — следуйте инструкциям на экране.
 
