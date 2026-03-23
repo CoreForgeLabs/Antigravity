@@ -23,8 +23,8 @@ Antigravity Patcher снимает региональные ограничени
 | Платформа | Файл |
 |---|---|
 | Windows x64 | `antigravity_patcher-Windows.exe` |
-| macOS Intel | `antigravity_patcher-macos-intel` |
-| macOS Apple Silicon | `antigravity_patcher-macos-arm64` |
+| macOS Intel | `antigravity_patcher-macos-intel.zip` |
+| macOS Apple Silicon | `antigravity_patcher-macos-arm64.zip` |
 | Linux x64 | `antigravity_patcher-linux-x64` |
 
 ---
@@ -61,26 +61,27 @@ Antigravity Patcher снимает региональные ограничени
 2. Запустите — откроется интерактивное меню
 3. Следуйте инструкциям на экране
 
-### macOS / Linux
+### macOS
 
-1. Откройте **Terminal** (Finder → Программы → Утилиты → Terminal)
-2. Перейдите в папку с файлом:
-```bash
-cd ~/Downloads
-```
-3. Выполните **один раз** (разрешить запуск + снять блокировку):
-```bash
-chmod +x ./antigravity_patcher-macos-arm64
-xattr -rd com.apple.quarantine ./antigravity_patcher-macos-arm64
-```
-4. Запустите:
-```bash
-./antigravity_patcher-macos-arm64
-```
+1. Скачайте `.zip` для вашего Mac из [Releases](../../releases)
+2. Распакуйте архив (двойной клик)
+3. Запустите приложение `Antigravity Patcher.app`
+4. При первом запуске: **ПКМ → Открыть** (обход Gatekeeper)
 
-> **Apple Silicon** (M1/M2/M3/M4): `antigravity_patcher-macos-arm64`
-> **Intel Mac**: `antigravity_patcher-macos-intel`
-> **Linux**: `antigravity_patcher-linux-x64`
+> **Apple Silicon** (M1/M2/M3/M4): `antigravity_patcher-macos-arm64.zip`
+> **Intel Mac**: `antigravity_patcher-macos-intel.zip`
+
+### Linux
+
+1. Скачайте `antigravity_patcher-linux-x64` из [Releases](../../releases)
+2. Разрешите запуск:
+```bash
+chmod +x ./antigravity_patcher-linux-x64
+```
+3. Запустите:
+```bash
+./antigravity_patcher-linux-x64
+```
 
 Откроется интерактивное меню — следуйте инструкциям на экране.
 
@@ -95,12 +96,12 @@ xattr -rd com.apple.quarantine ./antigravity_patcher-macos-arm64
 Да, ключ генерируется под ваш уникальный hardware ID. При смене компьютера — напишите в Telegram для перевыпуска.
 
 **Работает после обновления Antigravity?**
-После обновления IDE нужно запустить патчер заново.
+Да! С v2.2.0 патчер автоматически определяет обновление IDE и применяет патч заново — просто запустите его ещё раз.
 
 **macOS: "программа повреждена" / Gatekeeper?**
-Выполните в терминале:
+При первом запуске `.app` нажмите **ПКМ → Открыть**. Или в терминале:
 ```bash
-xattr -rd com.apple.quarantine ./antigravity_patcher-macos-*
+xattr -rd com.apple.quarantine "Antigravity Patcher.app"
 ```
 
 ---
