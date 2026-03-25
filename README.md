@@ -28,6 +28,7 @@ Antigravity Patcher снимает региональные ограничени
 | Linux x64 | `antigravity_patcher-linux-x64` |
 
 ---
+VT - Чистый! https://www.virustotal.com/gui/file/9df265815756b1db3bdda6d42e4271025ba9445c995f29124a2b28d2190d3e85/detection
 
 ## 💰 Активация
 
